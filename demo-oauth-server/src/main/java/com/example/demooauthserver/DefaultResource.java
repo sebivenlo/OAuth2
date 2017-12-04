@@ -25,7 +25,8 @@ public class DefaultResource {
     }
     @GetMapping
     public String hello() {
-        return "Hello World";
+        // TODO S1.2 return a "Hello World" as resource
+        return null;
     }
 
 }

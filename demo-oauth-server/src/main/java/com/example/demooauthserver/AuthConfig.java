@@ -27,21 +27,22 @@ public class AuthConfig extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-
-        security.tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()");
+        // TODO S2.3 Check that a user is authenticated in order to receive resources.
+        // first pass "permitAll()" through the tokenKeyAccess
+        // Then check if the user is authenticated with "isAuthenticated()"
+        // security. // UNCOMMENT
     }
 
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients
-                .inMemory()
-                .withClient("ClientId")
-                .secret("secret")
-                .authorizedGrantTypes("authorization_code")
-                .scopes("user_info")
-                .autoApprove(true);
+        // TODO S2.4 configure the OAUTH endpoint.
+        // Add "ClientId" as client id
+        // "secret" as secret
+        // "authorization_code" as grant type
+        // and "user_info" as the scope
+        // then automaticly approve
+        // clients. // UNCOMMENT
     }
 
 

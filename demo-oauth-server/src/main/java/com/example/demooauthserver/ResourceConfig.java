@@ -42,11 +42,10 @@ public class ResourceConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-        auth.parentAuthenticationManager(authenticationManager)
-                .inMemoryAuthentication()
-                .withUser("Peter")
-                .password("peter")
-                .roles("USER");
+        // TODO S1.1 make it possible to people to authenticate with username Hanz and password hanzel
+        // Give the "USER" permission to this user
+        // auth.parentAuthenticationManager(authenticationManager)      // UNCOMMENT
+        //        .inMemoryAuthentication(). // UNCOMMENT, 
+        
     }
 }

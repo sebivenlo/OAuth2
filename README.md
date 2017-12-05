@@ -7,9 +7,8 @@ OAuth2
 - `Press control 6 for exercises and start. A guidence is included underneath`
 
 ## OAuth2_Workshop_exercise
-```
-we are going to pick the @EnableOAuth2Sso annotation
-```
+``` Try to start your application and see if you can login with facebook.
+``` we are going to pick the @EnableOAuth2Sso annotation
 - there are 2 features behind the @EnableOAuth2Sso annotation:
 	- the OAuth2 client – is reusable, so you can also use it to interact with the OAuth2 resources that your Authorization server provides(in this case facebook).
 	- The authentication – aligns your app with the rest of spring security, so once the dance with facebook is over your app behaves exactly like any other secure spring app.
@@ -35,3 +34,4 @@ we are going to pick the @EnableOAuth2Sso annotation
 
 - Lastly – handling the redirects
 - we need to explicitly support the redirects from our app to facebook. This is handled in Spring Oauth2 with a servlet filter. This filter is already available because we used the @EnableOAuth2Client. To wire this all up, all we need is a FilterRegistartionBean.(TODO 1.9)
+``` Fire up your application and see if it works! you can visit the application at "localhost:8080"

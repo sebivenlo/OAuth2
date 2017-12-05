@@ -20,7 +20,14 @@ we are going to pick the @EnableOAuth2Sso annotation
 	- 1 create an OAuth2ClientContext, This is used to set up the authentication filter for the client later on.(TODO 1.2)
 	- 2 Create a bean for the client registration with facebook, Hint in slides.(TODO 1.3)
 	- 3 Create a bean to complete the authentication since it needs to know where the user info endpoint is in facebook, hint in slides(TODO 1.4)
-	- 4 and use these items to build an authentication filter method.(TODO 1.5)
+- 4 and use these items to build an authentication filter method. This might be a bit hard to understand so first try to figure it out yourself and otherwise you can look in the solution project(TODO 1.5).
+- Tip: look closely in the required paramaters or look at the imports that are still unused.
+	- `new OAuth2RestTemplate()`
+	- `set resttemplate for filter`
+	- `new UserInfoTokenServices();`
+	- `set rest template for tokenservice`
+	- `set tokenservice for filter`
+
 
 - Since we declared both these static dataobjects(facebook() and facebookResrouce()) as a @Bean decorated as an @ConfigurationPorperties it means you can also convert the application.yml resource file as a new format. Security.oauth2 can be removed and it can be configured as facebook(TODO 1.6)
 

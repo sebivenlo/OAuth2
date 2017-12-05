@@ -42,8 +42,8 @@ public class ResourceConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // TODO S1.1 make it possible to people to authenticate with username Hanz and password hanzel
-        // Give the "USER" permission to this user
+        // TODO S1.1 make it possible for people to authenticate with username Hanz and password hanzel
+        // Give the "USER" role to this user
         // auth.parentAuthenticationManager(authenticationManager)      // UNCOMMENT
         //        .inMemoryAuthentication(). // UNCOMMENT, 
         

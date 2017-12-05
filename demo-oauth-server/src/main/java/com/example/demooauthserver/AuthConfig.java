@@ -29,7 +29,7 @@ public class AuthConfig extends AuthorizationServerConfigurerAdapter {
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         // TODO S2.3 Check that a user is authenticated in order to receive resources.
         // first pass "permitAll()" through the tokenKeyAccess
-        // Then check if the user is authenticated with "isAuthenticated()"
+        // Then check if the user is authenticated with "isAuthenticated()" hin: checkTokenAccess
         // security. // UNCOMMENT
     }
 
@@ -37,12 +37,12 @@ public class AuthConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // TODO S2.4 configure the OAUTH endpoint.
-        // Add "ClientId" as client id
+        // Add "ClientId" as client id hint: withc...
         // "secret" as secret
         // "authorization_code" as grant type
         // and "user_info" as the scope
         // then automaticly approve
-        // clients. // UNCOMMENT
+        //   clients.inMemory() // UNCOMMENT
     }
 
 

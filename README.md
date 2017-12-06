@@ -1,5 +1,5 @@
 OAuth2
-## Instalation
+## Setup
 - `git clone https://github.com/sebivenlo/OAuth2.git`
 - `Open the OAuth2_Workshop_exercise project in netbeans`
 - `Install maven if needed`
@@ -10,9 +10,7 @@ OAuth2
 ``` 
 Try to start your application and see if you can login with facebook.
 ``` 
-``` 
-we are going to pick the @EnableOAuth2Sso annotation
-``` 
+we are going to pick the @EnableOAuth2Sso annotation apart to get a better understanding of how Oauth2 is can be set up in an application
 - there are 2 features behind the @EnableOAuth2Sso annotation:
 	- the OAuth2 client – is reusable, so you can also use it to interact with the OAuth2 resources that your Authorization server provides(in this case facebook).
 	- The authentication – aligns your app with the rest of spring security, so once the dance with facebook is over your app behaves exactly like any other secure spring app.

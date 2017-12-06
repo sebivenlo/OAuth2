@@ -34,7 +34,7 @@ public class SocialApplication extends WebSecurityConfigurerAdapter {
     
     /**
      * the client context is The OAuth 2 security context (for a specific user or client or combination thereof).
-     */ 
+     */
     // @Autowired
     // private //TODO 1.2 Create a OAuth2 client context
     
@@ -60,10 +60,13 @@ public class SocialApplication extends WebSecurityConfigurerAdapter {
             SpringApplication.run(SocialApplication.class, args);
     }
     
+    /*
+    * Spring Security provides a number of filters by default, and most of the time, these are enough.
+    * But of course sometimes it’s necessary to implement new functionality with createing a new filter to use in the chain.
+    */
     private Filter ssoFilter() {
         OAuth2ClientAuthenticationProcessingFilter facebookFilter = new OAuth2ClientAuthenticationProcessingFilter("/login/facebook");
         //TODO 1.5 Setup the facebook filter
-        //hint: Look in the slides for examples
         
         
         
